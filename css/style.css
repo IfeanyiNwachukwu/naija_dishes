@@ -1,0 +1,108 @@
+/*********************************************************/
+/* SET UP */
+/*********************************************************/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+}
+
+/*********************************************************/
+/* REUSABLE COMPONENTS */
+/*********************************************************/
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+:root{
+    --primaryColor: #b1624eff;
+    --mainWhite:#fff;
+    --mainBlack: #222;
+    --mainGrey:#ececec;
+    --mainSacing: 0.1rem;
+    --mainTransition: all 0.3s linear;
+}
+/*********************************************************/
+/* NAVBAR */
+/*********************************************************/
+.navbar{
+    background: var(--mainWhite);
+    position: sticky;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    display: flex; 
+    align-items: center;
+   background: rgb(231,226,221);
+   z-index: 1;
+}
+.navbar-center{
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+
+}
+.highlight{
+    color: var(--primaryColor);
+}
+.nav-icon{
+    color: var(--primaryColor);
+    font-size: 1.5rem;
+}
+.basket-btn{
+    position: relative;
+    cursor: pointer;
+}
+.basket-items{
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--primaryColor);
+    padding: 0 5px;
+    border-radius: 30%;
+    color: var(--mainWhite);
+}
+/*********************************************************/
+/* HERO */
+/*********************************************************/
+.hero{
+    min-height: calc(100vh - 60px);
+    background: url('../images/Ila-Alasepo-12\ \(1\).jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner{
+    text-align: center;
+    background: rgba(255,255,255,0.4);
+    display: inline-block;
+    padding: 2rem;
+}
+.banner-title{
+    font-size: 3.4rem;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSacing);
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    color: var(--mainWhite);
+}
+.banner-btn{
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSacing);
+    font-size: 1 rem;
+    background: var(--primaryColor);
+    color: var(--mainBlack);
+    border: 1px solid var(--primaryColor);
+    transition: var(--mainTransition);
+    cursor: pointer;
+}
+.banner-btn:hover{
+    background: transparent;
+    color: var(--primaryColor);
+}
