@@ -17,7 +17,7 @@
     --mainWhite:#fff;
     --mainBlack: #222;
     --mainGrey:#ececec;
-    --mainSacing: 0.1rem;
+    --mainSpacing: 0.1rem;
     --mainTransition: all 0.3s linear;
 }
 /*********************************************************/
@@ -86,7 +86,7 @@
 .banner-title{
     font-size: 3.4rem;
     text-transform: uppercase;
-    letter-spacing: var(--mainSacing);
+    letter-spacing: var(--mainSpacing);
     margin-bottom: 3rem;
     margin-top: 3rem;
     color: var(--mainWhite);
@@ -94,7 +94,7 @@
 .banner-btn{
     padding: 1rem 3rem;
     text-transform: uppercase;
-    letter-spacing: var(--mainSacing);
+    letter-spacing: var(--mainSpacing);
     font-size: 1 rem;
     background: var(--primaryColor);
     color: var(--mainBlack);
@@ -105,4 +105,192 @@
 .banner-btn:hover{
     background: transparent;
     color: var(--primaryColor);
+}
+/*********************************************************/
+/* DISHES */
+/*********************************************************/
+.dishes{
+    padding: 0rem 0;
+}
+.section-title h2{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
+}
+.dishes-center{
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px, 1 fr));
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 2rem;
+}
+
+.img-container{
+    position: relative;
+    overflow: hidden;
+}
+.bag-btn{
+    position: absolute;
+    top: 70%;
+    right: 0;
+    background: var(--primaryColor);
+    border: none;
+    text-transform: uppercase;
+    padding: 0.5rem 0.75rem;
+    letter-spacing: var(--mainSpacing);
+    font-weight: bold;
+    transition: var(--mainTransition);
+    transform: translate(101%);
+    cursor: pointer;
+}
+.bag-btn:hover{
+    color: var(--mainWhite);
+}
+.fa-shopping-basket{
+    margin-right: 0.5rem;
+}
+.img-container:hover .bag-btn{
+    transform: translateX(0);
+}
+.dishes-img{
+    display: block;
+    width: 100%;
+    min-height: 12rem;
+    transition: var(--mainTransition);
+}
+.img-container:hover .dishes-img{
+    opacity: 0.5;
+}
+.dishes h3{
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    letter-spacing: var(--mainSpacing);
+    text-align: center;
+}
+.dishes h4{
+    margin-top: 0.7rem;
+    letter-spacing: var(--mainSpacing);
+    color: var(--primaryColor);
+    text-align: center;
+}
+/*********************************************************/
+/* BASKET */
+/*********************************************************/
+.basket-overlay
+{
+    position: fixed;
+    top: 0;
+    right:0;
+    width: 100%;
+    height: 100%;
+   
+    transition: var(--mainTransition);
+    background: rgb(240,157,81,0.5);
+    z-index: 2;
+    visibility: hidden;
+}
+.basket
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+
+    z-index: 3;
+    background: rgb(231,226,221);
+    padding: 1.5rem;
+    transition: var(--mainTransition);
+    transform: translateX(100%);
+}
+.showBasket
+{
+    transform: translateX(0);
+}
+.transparentBcg
+{
+    visibility: visible;
+}
+@media screen and (min-width: 768px)
+{
+    .basket
+    {
+        width: 30vw;
+        min-width: 450px;
+    }
+}
+.close-basket
+{
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+.basket h2
+{
+    text-transform: capitalize;
+    text-align: center;
+    letter-spacing: var(--mainspacing);
+    margin-bottom: 2rem;
+}
+
+/*----- Basket Item ------- */
+.basket-item
+{
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+    grid-column-gap: 1.5rem;
+    margin: 1.5rem 0
+}
+.basket-item img
+{
+    width: 75px ;
+    height: 75px;
+}
+.basket-item h4
+{
+    font-size: 0.85rem;
+    text-transform: capitalize;
+    letter-spacing: var(--mainspacing);
+
+}
+
+.basket-item h5
+{
+    margin: 0.5rem 0;
+    letter-spacing: var(--mainspacing);
+}
+.item-amount
+{
+    text-align: center;
+}
+.remove-item
+{
+    color: grey;
+    cursor: pointer;
+}
+.fa-chevron-up,
+.fa-chevron-down
+{
+    color: var(--primarycolor);
+    cursor: pointer;
+}
+
+/*----- End of Basket Item ------- */
+
+.basket-footer
+{
+    margin-top: 2rem;
+    letter-spacing: var(--mainspacing);
+    text-align: center;
+}
+.basket-footer h3
+{
+    text-transform: capitalize;
+    margin-bottom: 1rem;
 }
