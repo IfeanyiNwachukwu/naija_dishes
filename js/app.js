@@ -5,7 +5,7 @@ const client = contentful.createClient({
     // This is the access token for this space. Normally 
     // you get both ID and the token in the contentful web
     // app
-    accessToken: "Wbrb5CdBByPdlnFusGaY6R6XH2fkHBGxaZVKNJ9fqwE"
+    accessToken: "check out contentful documentationn"
 });
 
 //Variables
